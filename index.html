@@ -689,8 +689,9 @@
     }
 
     .test-grid{
-      grid-template-columns:repeat(3,1fr);
-      margin-top:38px;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-top:38px;
     }
 
     .stars{
@@ -722,6 +723,14 @@
       font-size:14px;
     }
 
+    .testimonial img{
+  width:100%;
+  max-width:420px;
+  height:auto;
+  margin:0 auto;
+  border-radius:14px;
+    }
+    
     /* GUARANTEE */
 
     .guarantee{
@@ -987,12 +996,16 @@
       }
 
       .categories,
-      .benefit-grid,
-      .bonus-grid,
-      .test-grid{
-        grid-template-columns:1fr;
-      }
+.benefit-grid,
+.bonus-grid{
+  grid-template-columns:1fr;
+}
 
+.test-grid{
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+      
       .card{
         padding:21px;
       }
