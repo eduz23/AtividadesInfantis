@@ -35,11 +35,11 @@
     *{
       box-sizing:border-box;
       margin:0;
-      padding:0
+      padding:0;
     }
 
     html{
-      scroll-behavior:smooth
+      scroll-behavior:smooth;
     }
 
     body{
@@ -49,27 +49,36 @@
       -webkit-font-smoothing:antialiased;
     }
 
+    body.modal-open{
+      overflow:hidden;
+    }
+
     h1,h2,h3,h4{
       font-family:"Baloo 2",sans-serif;
-      line-height:1.05
+      line-height:1.05;
     }
 
     img{
       max-width:100%;
-      display:block
+      display:block;
     }
 
     a{
       text-decoration:none;
-      color:inherit
+      color:inherit;
+    }
+
+    button{
+      font-family:inherit;
     }
 
     .container{
       width:min(1100px,calc(100% - 32px));
-      margin:auto
+      margin:auto;
     }
 
     /* TIMER */
+
     .timer-bar{
       position:fixed;
       z-index:9999;
@@ -89,7 +98,7 @@
     }
 
     .timer-bar strong{
-      font-size:14px
+      font-size:14px;
     }
 
     .timer{
@@ -111,6 +120,7 @@
     }
 
     /* BUTTON */
+
     .cta{
       display:flex;
       align-items:center;
@@ -128,11 +138,13 @@
       box-shadow:var(--shadow-cta);
       transition:.2s;
       text-align:center;
+      border:0;
+      cursor:pointer;
     }
 
     .cta:hover{
       transform:translateY(-2px);
-      filter:saturate(1.08)
+      filter:saturate(1.08);
     }
 
     .small-note{
@@ -140,10 +152,11 @@
       color:var(--muted);
       font-size:12px;
       font-weight:700;
-      margin-top:10px
+      margin-top:10px;
     }
 
     /* HERO */
+
     .hero{
       padding:104px 0 70px;
       background:
@@ -177,7 +190,7 @@
     }
 
     .hero h1 .pink{
-      color:var(--pink)
+      color:var(--pink);
     }
 
     .hero-sub{
@@ -188,67 +201,56 @@
       color:var(--muted);
     }
 
+    /* MOCKUP ARREDONDADO */
+
     .hero-mockup{
       width:min(620px,100%);
-      margin:28px auto 18px;
+      margin:28px auto 28px;
+      border-radius:30px;
+      overflow:hidden;
       filter:drop-shadow(0 24px 25px rgba(70,20,90,.18));
       animation:float 6s ease-in-out infinite;
     }
 
     @keyframes float{
       0%,100%{
-        transform:translateY(0)
+        transform:translateY(0);
       }
 
       50%{
-        transform:translateY(-8px)
+        transform:translateY(-8px);
       }
     }
 
-    .hero-strip{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:9px;
-      margin:12px auto 28px;
-    }
-
-    .pill{
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:999px;
-      padding:8px 13px;
-      font-size:13px;
-      font-weight:800;
-    }
-
     /* SECTIONS */
+
     section{
-      padding:76px 0
+      padding:76px 0;
     }
 
     .section-title{
       text-align:center;
       max-width:800px;
-      margin:auto
+      margin:auto;
     }
 
     .section-title h2{
       font-size:clamp(32px,5vw,48px);
       color:var(--purple-dark);
-      font-weight:800
+      font-weight:800;
     }
 
     .section-title p{
       margin-top:12px;
       color:var(--muted);
       font-size:16px;
-      line-height:1.55
+      line-height:1.55;
     }
 
     /* RECEIVE */
+
     .receive{
-      background:#fff
+      background:#fff;
     }
 
     .big-number{
@@ -265,21 +267,21 @@
     .big-number b{
       display:block;
       font:800 58px/1 "Baloo 2",sans-serif;
-      color:var(--yellow)
+      color:var(--yellow);
     }
 
     .big-number span{
       font:800 20px "Baloo 2",sans-serif;
-      text-transform:uppercase
+      text-transform:uppercase;
     }
 
     .grid{
       display:grid;
-      gap:18px
+      gap:18px;
     }
 
     .categories{
-      grid-template-columns:repeat(3,1fr)
+      grid-template-columns:repeat(3,1fr);
     }
 
     .card{
@@ -303,28 +305,29 @@
     .card h3{
       margin-top:15px;
       color:var(--purple-dark);
-      font-size:21px
+      font-size:21px;
     }
 
     .card p{
       margin-top:8px;
       color:var(--muted);
       font-size:14px;
-      line-height:1.55
+      line-height:1.55;
     }
 
     /* BENEFITS */
+
     .benefits{
-      background:#f8efff
+      background:#f8efff;
     }
 
     .benefit-grid{
       grid-template-columns:repeat(3,1fr);
-      margin-top:38px
+      margin-top:38px;
     }
 
     .benefit .icon{
-      background:linear-gradient(135deg,#ffe66d,#ffb703)
+      background:linear-gradient(135deg,#ffe66d,#ffb703);
     }
 
     .quote{
@@ -340,50 +343,33 @@
     }
 
     /* BONUS */
+
     .bonus{
-      background:#fff
+      background:#fff;
     }
 
     .bonus-grid{
       grid-template-columns:repeat(3,1fr);
-      margin-top:38px
+      margin-top:38px;
     }
 
     .bonus-card{
       overflow:hidden;
-      text-align:center
+      text-align:center;
     }
 
-    /* IMAGEM DO BÔNUS 1 */
+    /* IMAGENS DOS BÔNUS MAIORES */
+
     .bonus-card img{
-      width:120px;
-      height:120px;
+      width:150px;
+      height:150px;
       object-fit:contain;
-      margin:10px auto 0;
-    }
-
-    .bonus-art{
-      height:190px;
-      border-radius:19px;
-      display:grid;
-      place-items:center;
-      font-size:68px;
-      background:
-        radial-gradient(circle at 25% 25%,#fff 0 7%,transparent 8%),
-        linear-gradient(135deg,#ffe66d,#ff8fab);
-    }
-
-    .bonus-card:nth-child(2) .bonus-art{
-      background:linear-gradient(135deg,#9bf6ff,#bdb2ff)
-    }
-
-    .bonus-card:nth-child(3) .bonus-art{
-      background:linear-gradient(135deg,#caffbf,#ffd6a5)
+      margin:5px auto 0;
     }
 
     .bonus-tag{
       display:inline-block;
-      margin-top:17px;
+      margin-top:12px;
       padding:5px 11px;
       border-radius:999px;
       background:var(--yellow);
@@ -393,17 +379,18 @@
     }
 
     /* OFFER */
+
     .offer{
       background:linear-gradient(135deg,var(--purple-dark),var(--pink-dark));
       color:#fff;
     }
 
     .offer .section-title h2{
-      color:#fff
+      color:#fff;
     }
 
     .offer .section-title p{
-      color:rgba(255,255,255,.78)
+      color:rgba(255,255,255,.78);
     }
 
     .offer-box{
@@ -419,19 +406,19 @@
     .check-list{
       list-style:none;
       display:grid;
-      gap:11px
+      gap:11px;
     }
 
     .check-list li{
       display:flex;
       gap:10px;
       font-weight:800;
-      font-size:15px
+      font-size:15px;
     }
 
     .check{
       color:#14a44d;
-      font-weight:900
+      font-weight:900;
     }
 
     .price{
@@ -445,7 +432,7 @@
     .old{
       text-decoration:line-through;
       color:#938995;
-      font-weight:700
+      font-weight:700;
     }
 
     .from{
@@ -453,12 +440,12 @@
       text-transform:uppercase;
       color:#938995;
       font-weight:900;
-      margin-top:4px
+      margin-top:4px;
     }
 
     .new-price{
       font:800 62px/1 "Baloo 2",sans-serif;
-      color:var(--purple-dark)
+      color:var(--purple-dark);
     }
 
     .instant{
@@ -473,9 +460,88 @@
       text-transform:uppercase;
     }
 
+    /* OFERTA ALTERNATIVA R$10 */
+
+    .alternative-offer{
+      width:min(580px,100%);
+      margin:22px auto 0;
+      padding:24px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.30);
+      border-radius:28px;
+      text-align:center;
+      backdrop-filter:blur(4px);
+    }
+
+    .alternative-badge{
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:999px;
+      background:var(--yellow);
+      color:#533a00;
+      font-size:11px;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+
+    .alternative-offer h3{
+      margin-top:10px;
+      color:#fff;
+      font-size:29px;
+    }
+
+    .alternative-offer p{
+      margin:8px auto 0;
+      max-width:480px;
+      color:rgba(255,255,255,.82);
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .alternative-price{
+      margin:14px 0;
+      color:var(--yellow);
+      font:800 42px/1 "Baloo 2",sans-serif;
+    }
+
+    .alternative-list{
+      list-style:none;
+      display:grid;
+      gap:7px;
+      margin:15px auto 20px;
+      text-align:left;
+      max-width:300px;
+    }
+
+    .alternative-list li{
+      color:#fff;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .alternative-list li::before{
+      content:"✓";
+      color:var(--yellow);
+      font-weight:900;
+      margin-right:8px;
+    }
+
+    .alternative-button{
+      max-width:430px;
+      margin:0 auto;
+      background:#fff;
+      color:var(--purple-dark);
+      box-shadow:none;
+    }
+
+    .alternative-button:hover{
+      background:#fff;
+    }
+
     /* EXAMPLES */
+
     .examples{
-      background:#fffaf0
+      background:#fffaf0;
     }
 
     .carousel-wrap{
@@ -486,17 +552,17 @@
 
     .carousel{
       overflow:hidden;
-      border-radius:26px
+      border-radius:26px;
     }
 
     .slides{
       display:flex;
-      transition:transform .35s ease
+      transition:transform .35s ease;
     }
 
     .slide{
       min-width:100%;
-      padding:18px
+      padding:18px;
     }
 
     .example-sheet{
@@ -526,13 +592,13 @@
       font-size:12px;
       font-weight:900;
       text-transform:uppercase;
-      color:var(--pink)
+      color:var(--pink);
     }
 
     .example-sheet h3{
       font-size:30px;
       color:var(--purple-dark);
-      margin-top:7px
+      margin-top:7px;
     }
 
     .activity-box{
@@ -546,29 +612,28 @@
 
     .fake-lines{
       margin-top:16px;
-      display:grid;
-      gap:10px
+      display:flex;
+      justify-content:center;
+      align-items:center;
     }
 
-    .fake-lines span{
-      height:12px;
-      border-radius:10px;
-      background:#eadcf2
-    }
+    /* IMAGENS DOS EXEMPLOS MENORES */
 
-    .fake-lines span:nth-child(2){
-      width:82%
-    }
-
-    .fake-lines span:nth-child(3){
-      width:65%
+    .fake-lines img{
+      width:100%;
+      max-width:260px;
+      height:auto;
+      max-height:190px;
+      object-fit:contain;
+      margin:0 auto;
+      border-radius:14px;
     }
 
     .dots{
       display:flex;
       justify-content:center;
       gap:7px;
-      margin-top:14px
+      margin-top:14px;
     }
 
     .dot{
@@ -583,7 +648,7 @@
 
     .dot.active{
       background:var(--pink);
-      transform:scale(1.2)
+      transform:scale(1.2);
     }
 
     .arrow{
@@ -604,39 +669,40 @@
     }
 
     .prev{
-      left:-10px
+      left:-10px;
     }
 
     .next{
-      right:-10px
+      right:-10px;
     }
 
     .example-note{
       text-align:center;
       color:var(--muted);
       font-size:13px;
-      margin-top:17px
+      margin-top:17px;
     }
 
     /* TESTIMONIALS */
+
     .testimonials{
-      background:#f8efff
+      background:#f8efff;
     }
 
     .test-grid{
       grid-template-columns:repeat(3,1fr);
-      margin-top:38px
+      margin-top:38px;
     }
 
     .stars{
       color:#ffb703;
-      letter-spacing:2px
+      letter-spacing:2px;
     }
 
     .person{
       display:flex;
       align-items:center;
-      gap:12px
+      gap:12px;
     }
 
     .avatar{
@@ -654,20 +720,13 @@
       margin-top:15px;
       line-height:1.55;
       color:var(--muted);
-      font-size:14px
-    }
-
-    .sample-note{
-      margin-top:12px;
-      text-align:center;
-      font-size:11px;
-      color:#8c7e91;
-      font-weight:700;
+      font-size:14px;
     }
 
     /* GUARANTEE */
+
     .guarantee{
-      background:#fff
+      background:#fff;
     }
 
     .guarantee-box{
@@ -682,20 +741,20 @@
     }
 
     .shield{
-      font-size:55px
+      font-size:55px;
     }
 
     .guarantee-box h2{
       font-size:38px;
       color:var(--purple-dark);
-      margin-top:8px
+      margin-top:8px;
     }
 
     .guarantee-box p{
       max-width:650px;
       margin:14px auto 0;
       color:var(--muted);
-      line-height:1.6
+      line-height:1.6;
     }
 
     .guarantee-tag{
@@ -710,22 +769,23 @@
     }
 
     /* FAQ */
+
     .faq-section{
-      background:#f8efff
+      background:#f8efff;
     }
 
     .faq{
       max-width:760px;
       margin:32px auto 0;
       display:grid;
-      gap:10px
+      gap:10px;
     }
 
     details{
       background:#fff;
       border:1px solid var(--border);
       border-radius:17px;
-      padding:17px 20px
+      padding:17px 20px;
     }
 
     summary{
@@ -733,17 +793,152 @@
       font-weight:900;
       color:var(--purple-dark);
       font-family:"Baloo 2",sans-serif;
-      font-size:18px
+      font-size:18px;
     }
 
     details p{
       margin-top:10px;
       color:var(--muted);
       line-height:1.55;
-      font-size:14px
+      font-size:14px;
+    }
+
+    /* MODAL DA OFERTA DE R$10 */
+
+    .offer-modal{
+      position:fixed;
+      inset:0;
+      z-index:10000;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      background:rgba(35,12,55,.72);
+      backdrop-filter:blur(5px);
+    }
+
+    .offer-modal.show{
+      display:flex;
+    }
+
+    .modal-box{
+      width:min(480px,100%);
+      max-height:90vh;
+      overflow-y:auto;
+      position:relative;
+      background:#fff;
+      border-radius:30px;
+      padding:30px 24px 24px;
+      text-align:center;
+      box-shadow:0 30px 80px rgba(0,0,0,.35);
+      animation:modalIn .25s ease;
+    }
+
+    @keyframes modalIn{
+      from{
+        opacity:0;
+        transform:translateY(20px) scale(.96);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+      }
+    }
+
+    .modal-close{
+      position:absolute;
+      top:10px;
+      right:12px;
+      width:38px;
+      height:38px;
+      border:0;
+      border-radius:50%;
+      background:#f5edf8;
+      color:var(--purple-dark);
+      font-size:24px;
+      line-height:1;
+      cursor:pointer;
+      font-weight:800;
+    }
+
+    .modal-emoji{
+      font-size:48px;
+    }
+
+    .modal-box h2{
+      margin-top:5px;
+      color:var(--purple-dark);
+      font-size:32px;
+    }
+
+    .modal-box > p{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.55;
+    }
+
+    .modal-price{
+      margin:18px auto;
+      padding:16px;
+      background:var(--cream);
+      border-radius:20px;
+    }
+
+    .modal-old{
+      color:#938995;
+      text-decoration:line-through;
+      font-weight:700;
+      font-size:15px;
+    }
+
+    .modal-special{
+      color:var(--pink);
+      font:800 52px/1 "Baloo 2",sans-serif;
+      margin-top:3px;
+    }
+
+    .modal-special-label{
+      color:var(--purple-dark);
+      font-size:12px;
+      font-weight:900;
+      text-transform:uppercase;
+    }
+
+    .modal-buttons{
+      display:grid;
+      gap:10px;
+    }
+
+    .modal-primary{
+      max-width:none;
+      font-size:18px;
+    }
+
+    .modal-secondary{
+      max-width:none;
+      background:#f1eaf5;
+      color:var(--purple-dark);
+      box-shadow:none;
+      font-size:15px;
+      padding:14px 18px;
+    }
+
+    .modal-secondary:hover{
+      background:#e9deef;
+      filter:none;
+    }
+
+    .modal-note{
+      margin-top:12px;
+      color:#8d8291;
+      font-size:11px;
+      font-weight:700;
     }
 
     /* FOOTER */
+
     footer{
       padding:32px 16px;
       background:#2f1454;
@@ -753,7 +948,7 @@
 
     footer p{
       font-size:13px;
-      opacity:.82
+      opacity:.82;
     }
 
     @media(max-width:800px){
@@ -762,66 +957,96 @@
       .benefit-grid,
       .bonus-grid,
       .test-grid{
-        grid-template-columns:1fr 1fr
+        grid-template-columns:1fr 1fr;
       }
 
       section{
-        padding:62px 0
+        padding:62px 0;
       }
     }
 
     @media(max-width:560px){
 
       .timer-bar{
-        gap:6px
+        gap:6px;
       }
 
       .timer-bar strong{
-        font-size:11px
+        font-size:11px;
       }
 
       .timer{
-        font-size:21px
+        font-size:21px;
       }
 
       .hero{
-        padding-top:94px
+        padding-top:94px;
       }
 
       .hero-sub{
-        font-size:16px
+        font-size:16px;
       }
 
       .categories,
       .benefit-grid,
       .bonus-grid,
       .test-grid{
-        grid-template-columns:1fr
+        grid-template-columns:1fr;
       }
 
       .card{
-        padding:21px
+        padding:21px;
       }
 
       .offer-box{
-        padding:21px
+        padding:21px;
       }
 
       .new-price{
-        font-size:54px
+        font-size:54px;
+      }
+
+      .alternative-offer{
+        padding:21px;
+      }
+
+      .alternative-offer h3{
+        font-size:26px;
       }
 
       .arrow{
         width:38px;
-        height:38px
+        height:38px;
       }
 
       .prev{
-        left:3px
+        left:3px;
       }
 
       .next{
-        right:3px
+        right:3px;
+      }
+
+      .example-sheet{
+        min-height:390px;
+        padding:21px;
+      }
+
+      .fake-lines img{
+        max-width:220px;
+        max-height:170px;
+      }
+
+      .modal-box{
+        padding:28px 18px 20px;
+      }
+
+      .modal-box h2{
+        font-size:28px;
+      }
+
+      .modal-special{
+        font-size:46px;
       }
     }
   </style>
@@ -830,20 +1055,29 @@
 <body>
 
   <!-- TIMER FIXO -->
+
   <div class="timer-bar">
-    <strong>🔥 OFERTA ESPECIAL TERMINA EM:</strong>
+
+    <strong>
+      🔥 OFERTA ESPECIAL TERMINA EM:
+    </strong>
 
     <div class="timer" aria-live="polite">
       <span id="min">15</span>:<span id="sec">00</span>
     </div>
+
   </div>
 
 
   <!-- 1. HERO -->
+
   <header class="hero">
+
     <div class="container" style="text-align:center">
 
-      <span class="badge">✨ Kit digital de atividades</span>
+      <span class="badge">
+        ✨ Kit digital de atividades
+      </span>
 
       <h1>
         350 <span class="pink">ATIVIDADES</span> PARA TIRAR AS CRIANÇAS DAS TELAS
@@ -854,18 +1088,15 @@
         em diversão, criatividade e momentos especiais em família.
       </p>
 
+      <!-- MOCKUP ARREDONDADO -->
+
       <img
         class="hero-mockup"
         src="hero-mockup.png"
         alt="Mockup do material 350 Atividades para Tirar as Crianças das Telas"
       >
 
-      <div class="hero-strip">
-        <span class="pill">🧠 Raciocínio</span>
-        <span class="pill">🎨 Criatividade</span>
-        <span class="pill">🎯 Atenção</span>
-        <span class="pill">❤️ Em família</span>
-      </div>
+      <!-- TEXTOS ABAIXO DO MOCKUP REMOVIDOS -->
 
       <a href="#oferta" class="cta">
         QUERO AS 350 ATIVIDADES 🚀
@@ -876,158 +1107,259 @@
       </p>
 
     </div>
+
   </header>
 
 
   <!-- 2. O QUE VAI RECEBER -->
+
   <section class="receive">
+
     <div class="container">
 
       <div class="section-title">
-        <h2>OLHA TUDO O QUE VOCÊ VAI RECEBER 👇</h2>
+
+        <h2>
+          OLHA TUDO O QUE VOCÊ VAI RECEBER 👇
+        </h2>
 
         <p>
           Um acervo completo para você ter sempre uma ideia diferente
           quando a criança estiver entediada.
         </p>
+
       </div>
 
+
       <div class="big-number">
-        <b>350</b>
+
+        <b>
+          350
+        </b>
+
         <span>
           Brincadeiras, desafios, jogos e atividades para imprimir
         </span>
+
       </div>
+
 
       <div class="grid categories">
 
+
         <article class="card">
-          <div class="icon">🧠</div>
-          <h3>Desafios de raciocínio</h3>
+
+          <div class="icon">
+            🧠
+          </div>
+
+          <h3>
+            Desafios de raciocínio
+          </h3>
+
           <p>
             Atividades divertidas para pensar, descobrir soluções e resolver pequenos desafios.
           </p>
+
         </article>
 
+
         <article class="card">
-          <div class="icon">🎨</div>
-          <h3>Atividades criativas</h3>
+
+          <div class="icon">
+            🎨
+          </div>
+
+          <h3>
+            Atividades criativas
+          </h3>
+
           <p>
             Desenho, criação e invenção para estimular a imaginação de um jeito leve.
           </p>
+
         </article>
 
+
         <article class="card">
-          <div class="icon">🧩</div>
-          <h3>Desafios de lógica</h3>
+
+          <div class="icon">
+            🧩
+          </div>
+
+          <h3>
+            Desafios de lógica
+          </h3>
+
           <p>
             Sequências, encaixes e enigmas simples para incentivar o pensamento.
           </p>
+
         </article>
 
+
         <article class="card">
-          <div class="icon">🧠</div>
-          <h3>Jogos de memória</h3>
+
+          <div class="icon">
+            🧠
+          </div>
+
+          <h3>
+            Jogos de memória
+          </h3>
+
           <p>
             Atividades leves para exercitar memória e atenção em forma de brincadeira.
           </p>
+
         </article>
 
+
         <article class="card">
-          <div class="icon">🔢</div>
-          <h3>Atividades com números</h3>
+
+          <div class="icon">
+            🔢
+          </div>
+
+          <h3>
+            Atividades com números
+          </h3>
+
           <p>
             Contagens, comparações e brincadeiras numéricas para aprender brincando.
           </p>
+
         </article>
 
+
         <article class="card">
-          <div class="icon">✏️</div>
-          <h3>Atividades de linguagem</h3>
+
+          <div class="icon">
+            ✏️
+          </div>
+
+          <h3>
+            Atividades de linguagem
+          </h3>
+
           <p>
             Palavras, rimas e histórias para incentivar comunicação e criatividade.
           </p>
+
         </article>
 
+
         <article class="card">
-          <div class="icon">🎭</div>
-          <h3>Brincadeiras de imaginação</h3>
+
+          <div class="icon">
+            🎭
+          </div>
+
+          <h3>
+            Brincadeiras de imaginação
+          </h3>
+
           <p>
             Faz de conta, personagens e cenários para a criança inventar suas próprias histórias.
           </p>
+
         </article>
 
+
         <article class="card">
-          <div class="icon">🏠</div>
-          <h3>Para fazer em casa</h3>
+
+          <div class="icon">
+            🏠
+          </div>
+
+          <h3>
+            Para fazer em casa
+          </h3>
+
           <p>
             Ideias para espaços pequenos, dias de chuva e tardes dentro de casa.
           </p>
+
         </article>
 
-        <article class="card">
-          <div class="icon">👨‍👩‍👧</div>
-          <h3>Em família</h3>
-          <p>
-            Brincadeiras para adultos e crianças participarem juntos.
-          </p>
-        </article>
 
-        <article class="card">
-          <div class="icon">🏃</div>
-          <h3>Com movimento</h3>
-          <p>
-            Circuitos e desafios ativos para gastar energia de forma divertida.
-          </p>
-        </article>
+        <!-- REMOVIDOS:
+             Em família
+             Com movimento
+        -->
+
 
       </div>
+
     </div>
+
   </section>
 
 
   <!-- 3. BENEFÍCIOS -->
+
   <section class="benefits">
+
     <div class="container">
 
       <div class="section-title">
-        <h2>POR QUE TER 350 ATIVIDADES EM CASA?</h2>
+
+        <h2>
+          POR QUE TER 350 ATIVIDADES EM CASA?
+        </h2>
 
         <p>
           Mais opções para os momentos em que você quer tirar a criança
           do celular, tablet ou TV.
         </p>
+
       </div>
+
 
       <div class="quote">
+
         “Chega de ouvir ‘mãe, estou entediado!’ e não saber o que fazer.”
+
       </div>
 
+
       <div style="margin-top:30px">
+
         <a href="#oferta" class="cta">
           QUERO 350 ATIVIDADES
         </a>
+
       </div>
 
     </div>
+
   </section>
 
 
   <!-- 4. BÔNUS -->
+
   <section class="bonus">
+
     <div class="container">
 
       <div class="section-title">
-        <h2>E AINDA TEM MAIS... 🎁</h2>
+
+        <h2>
+          E AINDA TEM MAIS... 🎁
+        </h2>
 
         <p>
           Além das 350 atividades, você também recebe estes bônus especiais.
         </p>
+
       </div>
+
 
       <div class="grid bonus-grid">
 
+
         <!-- BÔNUS 1 -->
+
         <article class="card bonus-card">
 
           <img
@@ -1052,9 +1384,13 @@
 
 
         <!-- BÔNUS 2 -->
+
         <article class="card bonus-card">
 
-          <img src="file_00000000eca8820e9706531770d58b6f.png"/>
+          <img
+            src="file_00000000eca8820e9706531770d58b6f.png"
+            alt="Bônus 2 - 50 Atividades Rápidas"
+          >
 
           <span class="bonus-tag">
             Bônus 2
@@ -1073,9 +1409,13 @@
 
 
         <!-- BÔNUS 3 -->
+
         <article class="card bonus-card">
 
-          <img src="file_0000000056c4820e9ed4412d395e677d.png"/>
+          <img
+            src="file_0000000056c4820e9ed4412d395e677d.png"
+            alt="Bônus 3 - Desafios do Dia"
+          >
 
           <span class="bonus-tag">
             Bônus 3
@@ -1092,16 +1432,22 @@
 
         </article>
 
+
       </div>
+
     </div>
+
   </section>
 
 
   <!-- 5. OFERTA -->
+
   <section class="offer" id="oferta">
+
     <div class="container">
 
       <div class="section-title">
+
         <h2>
           LEVE O KIT COMPLETO POR UM VALOR ESPECIAL
         </h2>
@@ -1110,7 +1456,11 @@
           Tenha acesso às atividades e aos bônus
           em um único material digital.
         </p>
+
       </div>
+
+
+      <!-- OFERTA COMPLETA R$27,90 -->
 
       <div class="offer-box">
 
@@ -1195,12 +1545,64 @@
         </p>
 
       </div>
+
+
+      <!-- OFERTA ALTERNATIVA R$10 -->
+
+      <div class="alternative-offer">
+
+        <span class="alternative-badge">
+          💜 OPÇÃO MAIS ECONÔMICA
+        </span>
+
+        <h3>
+          Quer começar gastando menos?
+        </h3>
+
+        <p>
+          Tenha uma versão essencial com atividades selecionadas
+          para começar a tirar as crianças das telas.
+        </p>
+
+        <div class="alternative-price">
+          R$ 10,00
+        </div>
+
+        <ul class="alternative-list">
+
+          <li>
+            50 atividades selecionadas
+          </li>
+
+          <li>
+            Desafios e brincadeiras
+          </li>
+
+          <li>
+            Acesso digital
+          </li>
+
+        </ul>
+
+        <button
+          type="button"
+          class="cta alternative-button"
+          id="openOfferModal"
+        >
+          QUERO A OFERTA DE R$10 💜
+        </button>
+
+      </div>
+
     </div>
+
   </section>
 
 
   <!-- 6. EXEMPLOS -->
+
   <section class="examples">
+
     <div class="container">
 
       <div class="section-title">
@@ -1231,7 +1633,9 @@
 
           <div class="slides" id="slides">
 
+
             <!-- EXEMPLO 1 -->
+
             <div class="slide">
 
               <div class="example-sheet">
@@ -1250,7 +1654,12 @@
                 </div>
 
                 <div class="fake-lines">
-                  <img src="file_0000000005e0820eb69c17a5fa3a6f0c.png"/>
+
+                  <img
+                    src="file_0000000005e0820eb69c17a5fa3a6f0c.png"
+                    alt="Exemplo de atividade de criatividade"
+                  >
+
                 </div>
 
               </div>
@@ -1259,6 +1668,7 @@
 
 
             <!-- EXEMPLO 2 -->
+
             <div class="slide">
 
               <div class="example-sheet">
@@ -1277,7 +1687,12 @@
                 </div>
 
                 <div class="fake-lines">
-                  <img src="file_0000000061b8820ea0a140ea633fd4d8.png"/>
+
+                  <img
+                    src="file_0000000061b8820ea0a140ea633fd4d8.png"
+                    alt="Exemplo de atividade de raciocínio"
+                  >
+
                 </div>
 
               </div>
@@ -1286,6 +1701,7 @@
 
 
             <!-- EXEMPLO 3 -->
+
             <div class="slide">
 
               <div class="example-sheet">
@@ -1304,7 +1720,12 @@
                 </div>
 
                 <div class="fake-lines">
-                  <img src="file_000000000470820e96a27a7674af930f.png"/>
+
+                  <img
+                    src="file_000000000470820e96a27a7674af930f.png"
+                    alt="Exemplo de atividade de atenção"
+                  >
+
                 </div>
 
               </div>
@@ -1313,6 +1734,7 @@
 
 
             <!-- EXEMPLO 4 -->
+
             <div class="slide">
 
               <div class="example-sheet">
@@ -1331,12 +1753,18 @@
                 </div>
 
                 <div class="fake-lines">
-                  <img src="file_000000004730820ebfe2ba669c6ba812.png"/>
+
+                  <img
+                    src="file_000000004730820ebfe2ba669c6ba812.png"
+                    alt="Exemplo de jogo da memória"
+                  >
+
                 </div>
 
               </div>
 
             </div>
+
 
           </div>
 
@@ -1351,7 +1779,6 @@
         </button>
 
 
-        <!-- OS 4 PONTINHOS SÃO GERADOS AUTOMATICAMENTE -->
         <div class="dots" id="dots"></div>
 
       </div>
@@ -1363,11 +1790,14 @@
       </p>
 
     </div>
+
   </section>
 
 
   <!-- 7. DEPOIMENTOS -->
+
   <section class="testimonials">
+
     <div class="container">
 
       <div class="section-title">
@@ -1385,6 +1815,7 @@
 
       <div class="grid test-grid">
 
+
         <article class="card testimonial">
 
           <div class="person">
@@ -1394,6 +1825,7 @@
             </div>
 
             <div>
+
               <strong>
                 Ana Martins
               </strong>
@@ -1401,6 +1833,7 @@
               <div class="stars">
                 ★★★★★
               </div>
+
             </div>
 
           </div>
@@ -1423,6 +1856,7 @@
             </div>
 
             <div>
+
               <strong>
                 Camila Souza
               </strong>
@@ -1430,6 +1864,7 @@
               <div class="stars">
                 ★★★★★
               </div>
+
             </div>
 
           </div>
@@ -1452,6 +1887,7 @@
             </div>
 
             <div>
+
               <strong>
                 Juliana Pereira
               </strong>
@@ -1459,6 +1895,7 @@
               <div class="stars">
                 ★★★★★
               </div>
+
             </div>
 
           </div>
@@ -1471,13 +1908,16 @@
 
         </article>
 
+
       </div>
 
     </div>
+
   </section>
 
 
   <!-- 8. GARANTIA -->
+
   <section class="guarantee">
 
     <div class="container">
@@ -1511,6 +1951,7 @@
 
 
   <!-- 9. FAQ -->
+
   <section class="faq-section">
 
     <div class="container">
@@ -1525,6 +1966,7 @@
 
 
       <div class="faq">
+
 
         <details>
 
@@ -1598,6 +2040,7 @@
 
         </details>
 
+
       </div>
 
 
@@ -1624,6 +2067,7 @@
 
 
   <!-- 10. RODAPÉ -->
+
   <footer>
 
     <p>
@@ -1634,7 +2078,113 @@
   </footer>
 
 
+  <!-- MODAL DA OFERTA DE R$10 -->
+
+  <div
+    class="offer-modal"
+    id="offerModal"
+    aria-hidden="true"
+  >
+
+    <div
+      class="modal-box"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+
+      <button
+        type="button"
+        class="modal-close"
+        id="closeOfferModal"
+        aria-label="Fechar"
+      >
+        ×
+      </button>
+
+
+      <div class="modal-emoji">
+        👀
+      </div>
+
+
+      <h2 id="modalTitle">
+        ESPERE! TEM UMA OFERTA MELHOR...
+      </h2>
+
+
+      <p>
+        Antes de continuar com a versão de R$10,
+        você pode levar o <strong>Kit Completo com 350 atividades + 3 bônus</strong>
+        por apenas:
+      </p>
+
+
+      <div class="modal-price">
+
+        <div class="modal-old">
+          De R$ 27,90
+        </div>
+
+        <div class="modal-special-label">
+          oferta especial
+        </div>
+
+        <div class="modal-special">
+          R$ 17,90
+        </div>
+
+      </div>
+
+
+      <div class="modal-buttons">
+
+        <!-- TEMPORARIAMENTE MESMO CHECKOUT -->
+
+        <a
+          href="https://pay.cakto.com.br/uk5pwud_1077440"
+          class="cta modal-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          SIM! QUERO O KIT COMPLETO POR R$17,90 🚀
+        </a>
+
+
+        <!-- TEMPORARIAMENTE MESMO CHECKOUT -->
+
+        <a
+          href="https://pay.cakto.com.br/uk5pwud_1077440"
+          class="cta modal-secondary"
+          target="_blank"
+          rel="noopener"
+        >
+          NÃO, QUERO CONTINUAR COM R$10
+        </a>
+
+      </div>
+
+
+      <p class="modal-note">
+        📲 Acesso digital após a confirmação da compra
+      </p>
+
+    </div>
+
+  </div>
+
+
   <script>
+
+    /* =========================
+       CHECKOUT
+       TEMPORARIAMENTE O MESMO
+       PARA TODAS AS OFERTAS
+    ========================= */
+
+    const CHECKOUT =
+      "https://pay.cakto.com.br/uk5pwud_1077440";
+
 
     /* =========================
        TIMER DE 15 MINUTOS
@@ -1644,8 +2194,11 @@
 
     function updateTimer(){
 
-      const min = Math.floor(remaining / 60);
-      const sec = remaining % 60;
+      const min =
+        Math.floor(remaining / 60);
+
+      const sec =
+        remaining % 60;
 
       document.getElementById("min").textContent =
         String(min).padStart(2,"0");
@@ -1665,23 +2218,117 @@
 
 
     /* =========================
-       CARROSSEL
-       AGORA COM 4 EXEMPLOS
+       MODAL DA OFERTA DE R$10
     ========================= */
 
-    const slides = document.getElementById("slides");
-    const dots = document.getElementById("dots");
+    const offerModal =
+      document.getElementById("offerModal");
 
-    const total = slides.children.length;
+    const openOfferModal =
+      document.getElementById("openOfferModal");
+
+    const closeOfferModal =
+      document.getElementById("closeOfferModal");
+
+
+    function openModal(){
+
+      offerModal.classList.add("show");
+
+      offerModal.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+      document.body.classList.add(
+        "modal-open"
+      );
+
+    }
+
+
+    function closeModal(){
+
+      offerModal.classList.remove("show");
+
+      offerModal.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+      document.body.classList.remove(
+        "modal-open"
+      );
+
+    }
+
+
+    openOfferModal.addEventListener(
+      "click",
+      openModal
+    );
+
+
+    closeOfferModal.addEventListener(
+      "click",
+      closeModal
+    );
+
+
+    /* FECHAR CLICANDO FORA DO MODAL */
+
+    offerModal.addEventListener(
+      "click",
+      function(e){
+
+        if(e.target === offerModal){
+          closeModal();
+        }
+
+      }
+    );
+
+
+    /* FECHAR COM ESC */
+
+    document.addEventListener(
+      "keydown",
+      function(e){
+
+        if(
+          e.key === "Escape" &&
+          offerModal.classList.contains("show")
+        ){
+          closeModal();
+        }
+
+      }
+    );
+
+
+    /* =========================
+       CARROSSEL
+       4 EXEMPLOS
+    ========================= */
+
+    const slides =
+      document.getElementById("slides");
+
+    const dots =
+      document.getElementById("dots");
+
+    const total =
+      slides.children.length;
 
     let current = 0;
 
 
-    /* CRIA AUTOMATICAMENTE 4 PONTINHOS */
+    /* CRIA OS PONTINHOS */
 
     for(let i = 0; i < total; i++){
 
-      const dot = document.createElement("button");
+      const dot =
+        document.createElement("button");
 
       dot.className =
         "dot" + (i === 0 ? " active" : "");
@@ -1700,45 +2347,63 @@
 
     function goTo(index){
 
-      current = (index + total) % total;
+      current =
+        (index + total) % total;
 
       slides.style.transform =
         `translateX(-${current * 100}%)`;
 
-      [...dots.children].forEach((dot,i) => {
 
-        dot.classList.toggle(
-          "active",
-          i === current
-        );
+      [...dots.children].forEach(
+        (dot,i) => {
 
-      });
+          dot.classList.toggle(
+            "active",
+            i === current
+          );
+
+        }
+      );
 
     }
 
 
     /* BOTÃO ANTERIOR */
 
-    document.querySelector(".prev").onclick = () => {
+    document.querySelector(
+      ".prev"
+    ).onclick = () => {
+
       goTo(current - 1);
+
     };
 
 
     /* BOTÃO PRÓXIMO */
 
-    document.querySelector(".next").onclick = () => {
+    document.querySelector(
+      ".next"
+    ).onclick = () => {
+
       goTo(current + 1);
+
     };
 
 
-    /* SWIPE NO CELULAR */
+    /* =========================
+       SWIPE NO CELULAR
+    ========================= */
 
     let startX = 0;
+
 
     slides.addEventListener(
       "touchstart",
       e => {
-        startX = e.touches[0].clientX;
+
+        startX =
+          e.touches[0].clientX;
+
       },
       {passive:true}
     );
@@ -1754,7 +2419,8 @@
         if(Math.abs(dx) > 50){
 
           goTo(
-            current + (dx < 0 ? 1 : -1)
+            current +
+            (dx < 0 ? 1 : -1)
           );
 
         }
@@ -1765,4 +2431,4 @@
   </script>
 
 </body>
-          </html>
+  </html>
