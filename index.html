@@ -32,24 +32,50 @@
       --radius:24px;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0
+    }
+
+    html{
+      scroll-behavior:smooth
+    }
+
     body{
       background:var(--bg);
       color:var(--ink);
       font-family:"Nunito",sans-serif;
       -webkit-font-smoothing:antialiased;
     }
-    h1,h2,h3,h4{font-family:"Baloo 2",sans-serif;line-height:1.05}
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1100px,calc(100% - 32px));margin:auto}
+
+    h1,h2,h3,h4{
+      font-family:"Baloo 2",sans-serif;
+      line-height:1.05
+    }
+
+    img{
+      max-width:100%;
+      display:block
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit
+    }
+
+    .container{
+      width:min(1100px,calc(100% - 32px));
+      margin:auto
+    }
 
     /* TIMER */
     .timer-bar{
       position:fixed;
       z-index:9999;
-      top:0;left:0;right:0;
+      top:0;
+      left:0;
+      right:0;
       min-height:58px;
       background:linear-gradient(90deg,var(--purple-dark),var(--pink-dark));
       color:#fff;
@@ -61,7 +87,11 @@
       box-shadow:0 4px 20px rgba(60,20,80,.22);
       text-align:center;
     }
-    .timer-bar strong{font-size:14px}
+
+    .timer-bar strong{
+      font-size:14px
+    }
+
     .timer{
       display:flex;
       align-items:center;
@@ -73,6 +103,7 @@
       min-width:82px;
       justify-content:center;
     }
+
     .timer span{
       background:rgba(255,255,255,.14);
       border-radius:8px;
@@ -98,8 +129,19 @@
       transition:.2s;
       text-align:center;
     }
-    .cta:hover{transform:translateY(-2px);filter:saturate(1.08)}
-    .small-note{text-align:center;color:var(--muted);font-size:12px;font-weight:700;margin-top:10px}
+
+    .cta:hover{
+      transform:translateY(-2px);
+      filter:saturate(1.08)
+    }
+
+    .small-note{
+      text-align:center;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:700;
+      margin-top:10px
+    }
 
     /* HERO */
     .hero{
@@ -110,6 +152,7 @@
         linear-gradient(180deg,#fff3fa 0%,#fffaf0 100%);
       overflow:hidden;
     }
+
     .badge{
       display:inline-flex;
       align-items:center;
@@ -124,6 +167,7 @@
       text-transform:uppercase;
       letter-spacing:.04em;
     }
+
     .hero h1{
       margin:18px auto 0;
       max-width:850px;
@@ -131,7 +175,11 @@
       font-size:clamp(38px,7vw,72px);
       font-weight:800;
     }
-    .hero h1 .pink{color:var(--pink)}
+
+    .hero h1 .pink{
+      color:var(--pink)
+    }
+
     .hero-sub{
       max-width:720px;
       margin:18px auto 0;
@@ -139,13 +187,24 @@
       line-height:1.55;
       color:var(--muted);
     }
+
     .hero-mockup{
       width:min(620px,100%);
       margin:28px auto 18px;
       filter:drop-shadow(0 24px 25px rgba(70,20,90,.18));
       animation:float 6s ease-in-out infinite;
     }
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0)
+      }
+
+      50%{
+        transform:translateY(-8px)
+      }
+    }
+
     .hero-strip{
       display:flex;
       justify-content:center;
@@ -153,6 +212,7 @@
       gap:9px;
       margin:12px auto 28px;
     }
+
     .pill{
       background:#fff;
       border:1px solid var(--border);
@@ -163,13 +223,34 @@
     }
 
     /* SECTIONS */
-    section{padding:76px 0}
-    .section-title{text-align:center;max-width:800px;margin:auto}
-    .section-title h2{font-size:clamp(32px,5vw,48px);color:var(--purple-dark);font-weight:800}
-    .section-title p{margin-top:12px;color:var(--muted);font-size:16px;line-height:1.55}
+    section{
+      padding:76px 0
+    }
+
+    .section-title{
+      text-align:center;
+      max-width:800px;
+      margin:auto
+    }
+
+    .section-title h2{
+      font-size:clamp(32px,5vw,48px);
+      color:var(--purple-dark);
+      font-weight:800
+    }
+
+    .section-title p{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.55
+    }
 
     /* RECEIVE */
-    .receive{background:#fff}
+    .receive{
+      background:#fff
+    }
+
     .big-number{
       width:min(500px,100%);
       margin:30px auto 38px;
@@ -180,10 +261,27 @@
       text-align:center;
       box-shadow:var(--shadow);
     }
-    .big-number b{display:block;font:800 58px/1 "Baloo 2",sans-serif;color:var(--yellow)}
-    .big-number span{font:800 20px "Baloo 2",sans-serif;text-transform:uppercase}
-    .grid{display:grid;gap:18px}
-    .categories{grid-template-columns:repeat(3,1fr)}
+
+    .big-number b{
+      display:block;
+      font:800 58px/1 "Baloo 2",sans-serif;
+      color:var(--yellow)
+    }
+
+    .big-number span{
+      font:800 20px "Baloo 2",sans-serif;
+      text-transform:uppercase
+    }
+
+    .grid{
+      display:grid;
+      gap:18px
+    }
+
+    .categories{
+      grid-template-columns:repeat(3,1fr)
+    }
+
     .card{
       background:#fff;
       border:1px solid var(--border);
@@ -191,20 +289,44 @@
       padding:24px;
       box-shadow:0 10px 28px rgba(80,30,100,.07);
     }
+
     .icon{
-      width:52px;height:52px;
-      display:grid;place-items:center;
+      width:52px;
+      height:52px;
+      display:grid;
+      place-items:center;
       border-radius:17px;
       background:var(--yellow-soft);
       font-size:27px;
     }
-    .card h3{margin-top:15px;color:var(--purple-dark);font-size:21px}
-    .card p{margin-top:8px;color:var(--muted);font-size:14px;line-height:1.55}
+
+    .card h3{
+      margin-top:15px;
+      color:var(--purple-dark);
+      font-size:21px
+    }
+
+    .card p{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.55
+    }
 
     /* BENEFITS */
-    .benefits{background:#f8efff}
-    .benefit-grid{grid-template-columns:repeat(3,1fr);margin-top:38px}
-    .benefit .icon{background:linear-gradient(135deg,#ffe66d,#ffb703)}
+    .benefits{
+      background:#f8efff
+    }
+
+    .benefit-grid{
+      grid-template-columns:repeat(3,1fr);
+      margin-top:38px
+    }
+
+    .benefit .icon{
+      background:linear-gradient(135deg,#ffe66d,#ffb703)
+    }
+
     .quote{
       max-width:760px;
       margin:34px auto 0;
@@ -218,9 +340,28 @@
     }
 
     /* BONUS */
-    .bonus{background:#fff}
-    .bonus-grid{grid-template-columns:repeat(3,1fr);margin-top:38px}
-    .bonus-card{overflow:hidden;text-align:center}
+    .bonus{
+      background:#fff
+    }
+
+    .bonus-grid{
+      grid-template-columns:repeat(3,1fr);
+      margin-top:38px
+    }
+
+    .bonus-card{
+      overflow:hidden;
+      text-align:center
+    }
+
+    /* IMAGEM DO BÔNUS 1 */
+    .bonus-card img{
+      width:120px;
+      height:120px;
+      object-fit:contain;
+      margin:10px auto 0;
+    }
+
     .bonus-art{
       height:190px;
       border-radius:19px;
@@ -231,8 +372,15 @@
         radial-gradient(circle at 25% 25%,#fff 0 7%,transparent 8%),
         linear-gradient(135deg,#ffe66d,#ff8fab);
     }
-    .bonus-card:nth-child(2) .bonus-art{background:linear-gradient(135deg,#9bf6ff,#bdb2ff)}
-    .bonus-card:nth-child(3) .bonus-art{background:linear-gradient(135deg,#caffbf,#ffd6a5)}
+
+    .bonus-card:nth-child(2) .bonus-art{
+      background:linear-gradient(135deg,#9bf6ff,#bdb2ff)
+    }
+
+    .bonus-card:nth-child(3) .bonus-art{
+      background:linear-gradient(135deg,#caffbf,#ffd6a5)
+    }
+
     .bonus-tag{
       display:inline-block;
       margin-top:17px;
@@ -249,8 +397,15 @@
       background:linear-gradient(135deg,var(--purple-dark),var(--pink-dark));
       color:#fff;
     }
-    .offer .section-title h2{color:#fff}
-    .offer .section-title p{color:rgba(255,255,255,.78)}
+
+    .offer .section-title h2{
+      color:#fff
+    }
+
+    .offer .section-title p{
+      color:rgba(255,255,255,.78)
+    }
+
     .offer-box{
       width:min(580px,100%);
       margin:32px auto 0;
@@ -260,9 +415,25 @@
       border-radius:30px;
       box-shadow:0 24px 60px rgba(40,10,60,.25);
     }
-    .check-list{list-style:none;display:grid;gap:11px}
-    .check-list li{display:flex;gap:10px;font-weight:800;font-size:15px}
-    .check{color:#14a44d;font-weight:900}
+
+    .check-list{
+      list-style:none;
+      display:grid;
+      gap:11px
+    }
+
+    .check-list li{
+      display:flex;
+      gap:10px;
+      font-weight:800;
+      font-size:15px
+    }
+
+    .check{
+      color:#14a44d;
+      font-weight:900
+    }
+
     .price{
       margin-top:24px;
       padding:22px;
@@ -270,9 +441,26 @@
       border-radius:20px;
       text-align:center;
     }
-    .old{text-decoration:line-through;color:#938995;font-weight:700}
-    .from{font-size:12px;text-transform:uppercase;color:#938995;font-weight:900;margin-top:4px}
-    .new-price{font:800 62px/1 "Baloo 2",sans-serif;color:var(--purple-dark)}
+
+    .old{
+      text-decoration:line-through;
+      color:#938995;
+      font-weight:700
+    }
+
+    .from{
+      font-size:12px;
+      text-transform:uppercase;
+      color:#938995;
+      font-weight:900;
+      margin-top:4px
+    }
+
+    .new-price{
+      font:800 62px/1 "Baloo 2",sans-serif;
+      color:var(--purple-dark)
+    }
+
     .instant{
       display:inline-block;
       margin-top:9px;
@@ -286,11 +474,31 @@
     }
 
     /* EXAMPLES */
-    .examples{background:#fffaf0}
-    .carousel-wrap{max-width:650px;margin:34px auto 0;position:relative}
-    .carousel{overflow:hidden;border-radius:26px}
-    .slides{display:flex;transition:transform .35s ease}
-    .slide{min-width:100%;padding:18px}
+    .examples{
+      background:#fffaf0
+    }
+
+    .carousel-wrap{
+      max-width:650px;
+      margin:34px auto 0;
+      position:relative;
+    }
+
+    .carousel{
+      overflow:hidden;
+      border-radius:26px
+    }
+
+    .slides{
+      display:flex;
+      transition:transform .35s ease
+    }
+
+    .slide{
+      min-width:100%;
+      padding:18px
+    }
+
     .example-sheet{
       min-height:410px;
       border-radius:22px;
@@ -301,17 +509,32 @@
       position:relative;
       overflow:hidden;
     }
+
     .example-sheet:before{
       content:"";
       position:absolute;
-      width:150px;height:150px;
+      width:150px;
+      height:150px;
       border-radius:50%;
       background:#ffd23f;
-      right:-45px;top:-45px;
+      right:-45px;
+      top:-45px;
       opacity:.55;
     }
-    .example-label{font-size:12px;font-weight:900;text-transform:uppercase;color:var(--pink)}
-    .example-sheet h3{font-size:30px;color:var(--purple-dark);margin-top:7px}
+
+    .example-label{
+      font-size:12px;
+      font-weight:900;
+      text-transform:uppercase;
+      color:var(--pink)
+    }
+
+    .example-sheet h3{
+      font-size:30px;
+      color:var(--purple-dark);
+      margin-top:7px
+    }
+
     .activity-box{
       margin-top:20px;
       padding:22px;
@@ -320,28 +543,120 @@
       font-weight:800;
       line-height:1.6;
     }
-    .fake-lines{margin-top:16px;display:grid;gap:10px}
-    .fake-lines span{height:12px;border-radius:10px;background:#eadcf2}
-    .fake-lines span:nth-child(2){width:82%}.fake-lines span:nth-child(3){width:65%}
-    .dots{display:flex;justify-content:center;gap:7px;margin-top:14px}
-    .dot{width:9px;height:9px;border-radius:50%;background:#d9c6df;cursor:pointer}
-    .dot.active{background:var(--pink);transform:scale(1.2)}
-    .arrow{
-      position:absolute;top:50%;transform:translateY(-50%);
-      width:42px;height:42px;border:0;border-radius:50%;
-      background:#fff;box-shadow:var(--shadow);font-size:22px;font-weight:900;cursor:pointer;
-      color:var(--purple-dark);z-index:2;
+
+    .fake-lines{
+      margin-top:16px;
+      display:grid;
+      gap:10px
     }
-    .prev{left:-10px}.next{right:-10px}
-    .example-note{text-align:center;color:var(--muted);font-size:13px;margin-top:17px}
+
+    .fake-lines span{
+      height:12px;
+      border-radius:10px;
+      background:#eadcf2
+    }
+
+    .fake-lines span:nth-child(2){
+      width:82%
+    }
+
+    .fake-lines span:nth-child(3){
+      width:65%
+    }
+
+    .dots{
+      display:flex;
+      justify-content:center;
+      gap:7px;
+      margin-top:14px
+    }
+
+    .dot{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:#d9c6df;
+      cursor:pointer;
+      border:0;
+      padding:0;
+    }
+
+    .dot.active{
+      background:var(--pink);
+      transform:scale(1.2)
+    }
+
+    .arrow{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:42px;
+      height:42px;
+      border:0;
+      border-radius:50%;
+      background:#fff;
+      box-shadow:var(--shadow);
+      font-size:22px;
+      font-weight:900;
+      cursor:pointer;
+      color:var(--purple-dark);
+      z-index:2;
+    }
+
+    .prev{
+      left:-10px
+    }
+
+    .next{
+      right:-10px
+    }
+
+    .example-note{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:17px
+    }
 
     /* TESTIMONIALS */
-    .testimonials{background:#f8efff}
-    .test-grid{grid-template-columns:repeat(3,1fr);margin-top:38px}
-    .stars{color:#ffb703;letter-spacing:2px}
-    .person{display:flex;align-items:center;gap:12px}
-    .avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#ffd6e8,#c7b7ff);font-weight:900;color:var(--purple-dark)}
-    .testimonial p{margin-top:15px;line-height:1.55;color:var(--muted);font-size:14px}
+    .testimonials{
+      background:#f8efff
+    }
+
+    .test-grid{
+      grid-template-columns:repeat(3,1fr);
+      margin-top:38px
+    }
+
+    .stars{
+      color:#ffb703;
+      letter-spacing:2px
+    }
+
+    .person{
+      display:flex;
+      align-items:center;
+      gap:12px
+    }
+
+    .avatar{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#ffd6e8,#c7b7ff);
+      font-weight:900;
+      color:var(--purple-dark);
+    }
+
+    .testimonial p{
+      margin-top:15px;
+      line-height:1.55;
+      color:var(--muted);
+      font-size:14px
+    }
+
     .sample-note{
       margin-top:12px;
       text-align:center;
@@ -351,63 +666,183 @@
     }
 
     /* GUARANTEE */
-    .guarantee{background:#fff}
+    .guarantee{
+      background:#fff
+    }
+
     .guarantee-box{
-      max-width:800px;margin:auto;padding:38px 28px;text-align:center;
-      border:2px solid var(--pink);border-radius:30px;background:#fff;
+      max-width:800px;
+      margin:auto;
+      padding:38px 28px;
+      text-align:center;
+      border:2px solid var(--pink);
+      border-radius:30px;
+      background:#fff;
       box-shadow:var(--shadow);
     }
-    .shield{font-size:55px}
-    .guarantee-box h2{font-size:38px;color:var(--purple-dark);margin-top:8px}
-    .guarantee-box p{max-width:650px;margin:14px auto 0;color:var(--muted);line-height:1.6}
+
+    .shield{
+      font-size:55px
+    }
+
+    .guarantee-box h2{
+      font-size:38px;
+      color:var(--purple-dark);
+      margin-top:8px
+    }
+
+    .guarantee-box p{
+      max-width:650px;
+      margin:14px auto 0;
+      color:var(--muted);
+      line-height:1.6
+    }
+
     .guarantee-tag{
-      display:inline-block;margin-top:20px;padding:9px 17px;border-radius:999px;
-      background:var(--purple);color:#fff;font-size:13px;font-weight:900;
+      display:inline-block;
+      margin-top:20px;
+      padding:9px 17px;
+      border-radius:999px;
+      background:var(--purple);
+      color:#fff;
+      font-size:13px;
+      font-weight:900;
     }
 
     /* FAQ */
-    .faq-section{background:#f8efff}
-    .faq{max-width:760px;margin:32px auto 0;display:grid;gap:10px}
-    details{background:#fff;border:1px solid var(--border);border-radius:17px;padding:17px 20px}
-    summary{cursor:pointer;font-weight:900;color:var(--purple-dark);font-family:"Baloo 2",sans-serif;font-size:18px}
-    details p{margin-top:10px;color:var(--muted);line-height:1.55;font-size:14px}
+    .faq-section{
+      background:#f8efff
+    }
+
+    .faq{
+      max-width:760px;
+      margin:32px auto 0;
+      display:grid;
+      gap:10px
+    }
+
+    details{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:17px;
+      padding:17px 20px
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      color:var(--purple-dark);
+      font-family:"Baloo 2",sans-serif;
+      font-size:18px
+    }
+
+    details p{
+      margin-top:10px;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:14px
+    }
 
     /* FOOTER */
-    footer{padding:32px 16px;background:#2f1454;color:#fff;text-align:center}
-    footer p{font-size:13px;opacity:.82}
+    footer{
+      padding:32px 16px;
+      background:#2f1454;
+      color:#fff;
+      text-align:center;
+    }
+
+    footer p{
+      font-size:13px;
+      opacity:.82
+    }
 
     @media(max-width:800px){
-      .categories,.benefit-grid,.bonus-grid,.test-grid{grid-template-columns:1fr 1fr}
-      section{padding:62px 0}
+
+      .categories,
+      .benefit-grid,
+      .bonus-grid,
+      .test-grid{
+        grid-template-columns:1fr 1fr
+      }
+
+      section{
+        padding:62px 0
+      }
     }
+
     @media(max-width:560px){
-      .timer-bar{gap:6px}
-      .timer-bar strong{font-size:11px}
-      .timer{font-size:21px}
-      .hero{padding-top:94px}
-      .hero-sub{font-size:16px}
-      .categories,.benefit-grid,.bonus-grid,.test-grid{grid-template-columns:1fr}
-      .card{padding:21px}
-      .offer-box{padding:21px}
-      .new-price{font-size:54px}
-      .arrow{width:38px;height:38px}
-      .prev{left:3px}.next{right:3px}
+
+      .timer-bar{
+        gap:6px
+      }
+
+      .timer-bar strong{
+        font-size:11px
+      }
+
+      .timer{
+        font-size:21px
+      }
+
+      .hero{
+        padding-top:94px
+      }
+
+      .hero-sub{
+        font-size:16px
+      }
+
+      .categories,
+      .benefit-grid,
+      .bonus-grid,
+      .test-grid{
+        grid-template-columns:1fr
+      }
+
+      .card{
+        padding:21px
+      }
+
+      .offer-box{
+        padding:21px
+      }
+
+      .new-price{
+        font-size:54px
+      }
+
+      .arrow{
+        width:38px;
+        height:38px
+      }
+
+      .prev{
+        left:3px
+      }
+
+      .next{
+        right:3px
+      }
     }
   </style>
 </head>
 
 <body>
+
   <!-- TIMER FIXO -->
   <div class="timer-bar">
     <strong>🔥 OFERTA ESPECIAL TERMINA EM:</strong>
+
     <div class="timer" aria-live="polite">
       <span id="min">15</span>:<span id="sec">00</span>
     </div>
   </div>
 
+
   <!-- 1. HERO -->
   <header class="hero">
     <div class="container" style="text-align:center">
+
       <span class="badge">✨ Kit digital de atividades</span>
 
       <h1>
@@ -419,8 +854,11 @@
         em diversão, criatividade e momentos especiais em família.
       </p>
 
-      <img class="hero-mockup" src="hero-mockup.png"
-           alt="Mockup do material 350 Atividades para Tirar as Crianças das Telas">
+      <img
+        class="hero-mockup"
+        src="hero-mockup.png"
+        alt="Mockup do material 350 Atividades para Tirar as Crianças das Telas"
+      >
 
       <div class="hero-strip">
         <span class="pill">🧠 Raciocínio</span>
@@ -429,327 +867,914 @@
         <span class="pill">❤️ Em família</span>
       </div>
 
-      <a href="#oferta" class="cta">QUERO AS 350 ATIVIDADES 🚀</a>
-      <p class="small-note">📲 Acesso digital após a confirmação da compra</p>
+      <a href="#oferta" class="cta">
+        QUERO AS 350 ATIVIDADES 🚀
+      </a>
+
+      <p class="small-note">
+        📲 Acesso digital após a confirmação da compra
+      </p>
+
     </div>
   </header>
+
 
   <!-- 2. O QUE VAI RECEBER -->
   <section class="receive">
     <div class="container">
+
       <div class="section-title">
         <h2>OLHA TUDO O QUE VOCÊ VAI RECEBER 👇</h2>
-        <p>Um acervo completo para você ter sempre uma ideia diferente quando a criança estiver entediada.</p>
+
+        <p>
+          Um acervo completo para você ter sempre uma ideia diferente
+          quando a criança estiver entediada.
+        </p>
       </div>
 
       <div class="big-number">
         <b>350</b>
-        <span>Brincadeiras, desafios, jogos e atividades para imprimir</span>
+        <span>
+          Brincadeiras, desafios, jogos e atividades para imprimir
+        </span>
       </div>
 
       <div class="grid categories">
-        <article class="card"><div class="icon">🧠</div><h3>Desafios de raciocínio</h3><p>Atividades divertidas para pensar, descobrir soluções e resolver pequenos desafios.</p></article>
-        <article class="card"><div class="icon">🎨</div><h3>Atividades criativas</h3><p>Desenho, criação e invenção para estimular a imaginação de um jeito leve.</p></article>
-        <article class="card"><div class="icon">🧩</div><h3>Desafios de lógica</h3><p>Sequências, encaixes e enigmas simples para incentivar o pensamento.</p></article>
-        <article class="card"><div class="icon">🧠</div><h3>Jogos de memória</h3><p>Atividades leves para exercitar memória e atenção em forma de brincadeira.</p></article>
-        <article class="card"><div class="icon">🔢</div><h3>Atividades com números</h3><p>Contagens, comparações e brincadeiras numéricas para aprender brincando.</p></article>
-        <article class="card"><div class="icon">✏️</div><h3>Atividades de linguagem</h3><p>Palavras, rimas e histórias para incentivar comunicação e criatividade.</p></article>
-        <article class="card"><div class="icon">🎭</div><h3>Brincadeiras de imaginação</h3><p>Faz de conta, personagens e cenários para a criança inventar suas próprias histórias.</p></article>
-        <article class="card"><div class="icon">🏠</div><h3>Para fazer em casa</h3><p>Ideias para espaços pequenos, dias de chuva e tardes dentro de casa.</p></article>
-        <article class="card"><div class="icon">👨‍👩‍👧</div><h3>Em família</h3><p>Brincadeiras para adultos e crianças participarem juntos.</p></article>
-        <article class="card"><div class="icon">🏃</div><h3>Com movimento</h3><p>Circuitos e desafios ativos para gastar energia de forma divertida.</p></article>
+
+        <article class="card">
+          <div class="icon">🧠</div>
+          <h3>Desafios de raciocínio</h3>
+          <p>
+            Atividades divertidas para pensar, descobrir soluções e resolver pequenos desafios.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎨</div>
+          <h3>Atividades criativas</h3>
+          <p>
+            Desenho, criação e invenção para estimular a imaginação de um jeito leve.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧩</div>
+          <h3>Desafios de lógica</h3>
+          <p>
+            Sequências, encaixes e enigmas simples para incentivar o pensamento.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧠</div>
+          <h3>Jogos de memória</h3>
+          <p>
+            Atividades leves para exercitar memória e atenção em forma de brincadeira.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🔢</div>
+          <h3>Atividades com números</h3>
+          <p>
+            Contagens, comparações e brincadeiras numéricas para aprender brincando.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">✏️</div>
+          <h3>Atividades de linguagem</h3>
+          <p>
+            Palavras, rimas e histórias para incentivar comunicação e criatividade.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎭</div>
+          <h3>Brincadeiras de imaginação</h3>
+          <p>
+            Faz de conta, personagens e cenários para a criança inventar suas próprias histórias.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🏠</div>
+          <h3>Para fazer em casa</h3>
+          <p>
+            Ideias para espaços pequenos, dias de chuva e tardes dentro de casa.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">👨‍👩‍👧</div>
+          <h3>Em família</h3>
+          <p>
+            Brincadeiras para adultos e crianças participarem juntos.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🏃</div>
+          <h3>Com movimento</h3>
+          <p>
+            Circuitos e desafios ativos para gastar energia de forma divertida.
+          </p>
+        </article>
+
       </div>
     </div>
   </section>
+
 
   <!-- 3. BENEFÍCIOS -->
   <section class="benefits">
     <div class="container">
+
       <div class="section-title">
         <h2>POR QUE TER 350 ATIVIDADES EM CASA?</h2>
-        <p>Mais opções para os momentos em que você quer tirar a criança do celular, tablet ou TV.</p>
+
+        <p>
+          Mais opções para os momentos em que você quer tirar a criança
+          do celular, tablet ou TV.
+        </p>
       </div>
 
-      <div class="quote">“Chega de ouvir ‘mãe, estou entediado!’ e não saber o que fazer.”</div>
+      <div class="quote">
+        “Chega de ouvir ‘mãe, estou entediado!’ e não saber o que fazer.”
+      </div>
 
       <div style="margin-top:30px">
-        <a href="#oferta" class="cta">QUERO 350 ATIVIDADES</a>
+        <a href="#oferta" class="cta">
+          QUERO 350 ATIVIDADES
+        </a>
       </div>
+
     </div>
   </section>
+
 
   <!-- 4. BÔNUS -->
   <section class="bonus">
     <div class="container">
+
       <div class="section-title">
         <h2>E AINDA TEM MAIS... 🎁</h2>
-        <p>Além das 350 atividades, você também recebe estes bônus especiais.</p>
+
+        <p>
+          Além das 350 atividades, você também recebe estes bônus especiais.
+        </p>
       </div>
 
       <div class="grid bonus-grid">
+
+        <!-- BÔNUS 1 -->
         <article class="card bonus-card">
-          <img src="file_000000000e88820e9be0fb53cae795bc.png"/>
-          <span class="bonus-tag">Bônus 1</span>
-          <h3>30 Dias de Brincadeiras</h3>
-          <p>Uma sugestão de atividade para cada dia, ajudando você a criar uma rotina de brincadeiras.</p>
+
+          <img
+            src="file_000000000e88820e9be0fb53cae795bc.png"
+            alt="Bônus 1 - 30 Dias de Brincadeiras"
+          >
+
+          <span class="bonus-tag">
+            Bônus 1
+          </span>
+
+          <h3>
+            30 Dias de Brincadeiras
+          </h3>
+
+          <p>
+            Uma sugestão de atividade para cada dia,
+            ajudando você a criar uma rotina de brincadeiras.
+          </p>
+
         </article>
+
+
+        <!-- BÔNUS 2 -->
         <article class="card bonus-card">
-          <div class="bonus-art">⚡</div>
-          <span class="bonus-tag">Bônus 2</span>
-          <h3>50 Atividades Rápidas</h3>
-          <p>Ideias simples para aqueles momentos em que você precisa de uma atividade rápida.</p>
+
+          <div class="bonus-art">
+            ⚡
+          </div>
+
+          <span class="bonus-tag">
+            Bônus 2
+          </span>
+
+          <h3>
+            50 Atividades Rápidas
+          </h3>
+
+          <p>
+            Ideias simples para aqueles momentos em que
+            você precisa de uma atividade rápida.
+          </p>
+
         </article>
+
+
+        <!-- BÔNUS 3 -->
         <article class="card bonus-card">
-          <div class="bonus-art">🏆</div>
-          <span class="bonus-tag">Bônus 3</span>
-          <h3>Desafios do Dia</h3>
-          <p>Desafios curtos e divertidos para estimular criatividade, raciocínio e imaginação.</p>
+
+          <div class="bonus-art">
+            🏆
+          </div>
+
+          <span class="bonus-tag">
+            Bônus 3
+          </span>
+
+          <h3>
+            Desafios do Dia
+          </h3>
+
+          <p>
+            Desafios curtos e divertidos para estimular
+            criatividade, raciocínio e imaginação.
+          </p>
+
         </article>
+
       </div>
     </div>
   </section>
+
 
   <!-- 5. OFERTA -->
   <section class="offer" id="oferta">
     <div class="container">
+
       <div class="section-title">
-        <h2>LEVE O KIT COMPLETO POR UM VALOR ESPECIAL</h2>
-        <p>Tenha acesso às atividades e aos bônus em um único material digital.</p>
+        <h2>
+          LEVE O KIT COMPLETO POR UM VALOR ESPECIAL
+        </h2>
+
+        <p>
+          Tenha acesso às atividades e aos bônus
+          em um único material digital.
+        </p>
       </div>
 
       <div class="offer-box">
+
         <ul class="check-list">
-          <li><span class="check">✓</span> 350 atividades</li>
-          <li><span class="check">✓</span> Atividades para diferentes idades</li>
-          <li><span class="check">✓</span> Brincadeiras para fazer em casa</li>
-          <li><span class="check">✓</span> Atividades longe das telas</li>
-          <li><span class="check">✓</span> 30 Dias de Brincadeiras</li>
-          <li><span class="check">✓</span> 50 Atividades Rápidas</li>
-          <li><span class="check">✓</span> Desafios do Dia</li>
-          <li><span class="check">✓</span> Acesso digital</li>
+
+          <li>
+            <span class="check">✓</span>
+            350 atividades
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            Atividades para diferentes idades
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            Brincadeiras para fazer em casa
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            Atividades longe das telas
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            30 Dias de Brincadeiras
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            50 Atividades Rápidas
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            Desafios do Dia
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            Acesso digital
+          </li>
+
         </ul>
 
+
         <div class="price">
-          <div class="old">De R$ 57,90</div>
-          <div class="from">por apenas</div>
-          <div class="new-price">R$ 27,90</div>
-          <span class="instant">⚡ Acesso imediato</span>
+
+          <div class="old">
+            De R$ 57,90
+          </div>
+
+          <div class="from">
+            por apenas
+          </div>
+
+          <div class="new-price">
+            R$ 27,90
+          </div>
+
+          <span class="instant">
+            ⚡ Acesso imediato
+          </span>
+
         </div>
 
-        <a class="cta" style="margin-top:22px"
-           href="https://pay.cakto.com.br/uk5pwud_1077440"
-           target="_blank" rel="noopener">
+
+        <a
+          class="cta"
+          style="margin-top:22px"
+          href="https://pay.cakto.com.br/uk5pwud_1077440"
+          target="_blank"
+          rel="noopener"
+        >
           QUERO ACESSAR AGORA 🚀
         </a>
-        <p class="small-note">📲 Acesso digital após a confirmação da compra</p>
+
+        <p class="small-note">
+          📲 Acesso digital após a confirmação da compra
+        </p>
+
       </div>
     </div>
   </section>
+
 
   <!-- 6. EXEMPLOS -->
   <section class="examples">
     <div class="container">
+
       <div class="section-title">
-        <h2>VEJA UM POUCO DO QUE VOCÊ VAI RECEBER 👀</h2>
-        <p>Alguns exemplos ilustrativos do tipo de atividade que pode fazer parte do material.</p>
+
+        <h2>
+          VEJA UM POUCO DO QUE VOCÊ VAI RECEBER 👀
+        </h2>
+
+        <p>
+          Alguns exemplos ilustrativos do tipo de atividade
+          que pode fazer parte do material.
+        </p>
+
       </div>
+
 
       <div class="carousel-wrap">
-        <button class="arrow prev" aria-label="Anterior">‹</button>
+
+        <button
+          class="arrow prev"
+          aria-label="Anterior"
+        >
+          ‹
+        </button>
+
+
         <div class="carousel">
+
           <div class="slides" id="slides">
+
+            <!-- EXEMPLO 1 -->
             <div class="slide">
+
               <div class="example-sheet">
-                <div class="example-label">Exemplo 1 • Criatividade</div>
-                <h3>Complete o desenho 🎨</h3>
-                <div class="activity-box">A criança recebe uma forma inicial e deve transformar o desenho em algo que imaginar.</div>
-                <div class="fake-lines"><span></span><span></span><span></span></div>
+
+                <div class="example-label">
+                  Exemplo 1 • Criatividade
+                </div>
+
+                <h3>
+                  Complete o desenho 🎨
+                </h3>
+
+                <div class="activity-box">
+                  A criança recebe uma forma inicial e deve
+                  transformar o desenho em algo que imaginar.
+                </div>
+
+                <div class="fake-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
               </div>
+
             </div>
+
+
+            <!-- EXEMPLO 2 -->
             <div class="slide">
+
               <div class="example-sheet">
-                <div class="example-label">Exemplo 2 • Raciocínio</div>
-                <h3>Qual vem depois? 🧩</h3>
-                <div class="activity-box">Observe a sequência, descubra o padrão e escolha qual figura deve aparecer em seguida.</div>
-                <div class="fake-lines"><span></span><span></span><span></span></div>
+
+                <div class="example-label">
+                  Exemplo 2 • Raciocínio
+                </div>
+
+                <h3>
+                  Qual vem depois? 🧩
+                </h3>
+
+                <div class="activity-box">
+                  Observe a sequência, descubra o padrão
+                  e escolha qual figura deve aparecer em seguida.
+                </div>
+
+                <div class="fake-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
               </div>
+
             </div>
+
+
+            <!-- EXEMPLO 3 -->
             <div class="slide">
+
               <div class="example-sheet">
-                <div class="example-label">Exemplo 3 • Atenção</div>
-                <h3>Encontre as diferenças 🔎</h3>
-                <div class="activity-box">Observe as imagens com atenção e encontre os detalhes que mudaram.</div>
-                <div class="fake-lines"><span></span><span></span><span></span></div>
+
+                <div class="example-label">
+                  Exemplo 3 • Atenção
+                </div>
+
+                <h3>
+                  Encontre as diferenças 🔎
+                </h3>
+
+                <div class="activity-box">
+                  Observe as imagens com atenção e encontre
+                  os detalhes que mudaram.
+                </div>
+
+                <div class="fake-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
               </div>
+
             </div>
+
+
+            <!-- EXEMPLO 4 -->
             <div class="slide">
+
               <div class="example-sheet">
-                <div class="example-label">Exemplo 4 • Memória</div>
-                <h3>Jogo da memória 🧠</h3>
-                <div class="activity-box">Recorte, organize as cartas e brinque tentando encontrar os pares.</div>
-                <div class="fake-lines"><span></span><span></span><span></span></div>
+
+                <div class="example-label">
+                  Exemplo 4 • Memória
+                </div>
+
+                <h3>
+                  Jogo da memória 🧠
+                </h3>
+
+                <div class="activity-box">
+                  Recorte, organize as cartas e brinque
+                  tentando encontrar os pares.
+                </div>
+
+                <div class="fake-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
               </div>
+
             </div>
-            <div class="slide">
-              <div class="example-sheet">
-                <div class="example-label">Exemplo 5 • Em família</div>
-                <h3>Desafio em equipe ❤️</h3>
-                <div class="activity-box">Uma brincadeira para adultos e crianças colaborarem, conversarem e se divertirem.</div>
-                <div class="fake-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
+
           </div>
+
         </div>
-        <button class="arrow next" aria-label="Próximo">›</button>
+
+
+        <button
+          class="arrow next"
+          aria-label="Próximo"
+        >
+          ›
+        </button>
+
+
+        <!-- OS 4 PONTINHOS SÃO GERADOS AUTOMATICAMENTE -->
         <div class="dots" id="dots"></div>
+
       </div>
 
-      <p class="example-note">Os exemplos acima são ilustrativos. O material completo é disponibilizado após a compra.</p>
+
+      <p class="example-note">
+        Os exemplos acima são ilustrativos. O material completo
+        é disponibilizado após a compra.
+      </p>
+
     </div>
   </section>
+
 
   <!-- 7. DEPOIMENTOS -->
   <section class="testimonials">
     <div class="container">
+
       <div class="section-title">
-        <h2>QUEM USA, APROVA ❤️</h2>
-        <p>Espaço reservado para avaliações reais de compradores.</p>
+
+        <h2>
+          QUEM USA, APROVA ❤️
+        </h2>
+
+        <p>
+          Espaço reservado para avaliações reais de compradores.
+        </p>
+
       </div>
+
 
       <div class="grid test-grid">
-        <article class="card testimonial">
-          <div class="person">
-            <div class="avatar">AM</div>
-            <div><strong>Ana Martins</strong><div class="stars">★★★★★</div></div>
-          </div>
-          <p>“As atividades são ótimas para aqueles momentos em que minha filha fica sem ideia do que fazer. Ela adorou principalmente os desafios.”</p>
-        </article>
 
         <article class="card testimonial">
+
           <div class="person">
-            <div class="avatar">CS</div>
-            <div><strong>Camila Souza</strong><div class="stars">★★★★★</div></div>
+
+            <div class="avatar">
+              AM
+            </div>
+
+            <div>
+              <strong>
+                Ana Martins
+              </strong>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+            </div>
+
           </div>
-          <p>“Gostei muito da variedade. Agora tenho várias opções para fazer com meu filho sem precisar ficar procurando na internet.”</p>
+
+          <p>
+            “As atividades são ótimas para aqueles momentos
+            em que minha filha fica sem ideia do que fazer.
+            Ela adorou principalmente os desafios.”
+          </p>
+
         </article>
 
+
         <article class="card testimonial">
+
           <div class="person">
-            <div class="avatar">JP</div>
-            <div><strong>Juliana Pereira</strong><div class="stars">★★★★★</div></div>
+
+            <div class="avatar">
+              CS
+            </div>
+
+            <div>
+              <strong>
+                Camila Souza
+              </strong>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+            </div>
+
           </div>
-          <p>“Material bem organizado e fácil de usar. Aqui em casa já virou uma opção para os dias em que queremos ficar longe das telas.”</p>
+
+          <p>
+            “Gostei muito da variedade. Agora tenho várias
+            opções para fazer com meu filho sem precisar
+            ficar procurando na internet.”
+          </p>
+
         </article>
+
+
+        <article class="card testimonial">
+
+          <div class="person">
+
+            <div class="avatar">
+              JP
+            </div>
+
+            <div>
+              <strong>
+                Juliana Pereira
+              </strong>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+            </div>
+
+          </div>
+
+          <p>
+            “Material bem organizado e fácil de usar.
+            Aqui em casa já virou uma opção para os dias
+            em que queremos ficar longe das telas.”
+          </p>
+
+        </article>
+
       </div>
-
 
     </div>
   </section>
+
 
   <!-- 8. GARANTIA -->
   <section class="guarantee">
+
     <div class="container">
+
       <div class="guarantee-box">
-        <div class="shield">🛡️</div>
-        <h2>VOCÊ TEM 7 DIAS PARA TESTAR</h2>
+
+        <div class="shield">
+          🛡️
+        </div>
+
+        <h2>
+          VOCÊ TEM 7 DIAS PARA TESTAR
+        </h2>
+
         <p>
-          Você tem 7 dias para conhecer o material. Se perceber que ele não faz sentido
-          para você, poderá solicitar o reembolso dentro do prazo previsto na oferta.
+          Você tem 7 dias para conhecer o material.
+          Se perceber que ele não faz sentido para você,
+          poderá solicitar o reembolso dentro do prazo
+          previsto na oferta.
         </p>
-        <span class="guarantee-tag">GARANTIA INCONDICIONAL DE 7 DIAS</span>
+
+        <span class="guarantee-tag">
+          GARANTIA INCONDICIONAL DE 7 DIAS
+        </span>
+
       </div>
+
     </div>
+
   </section>
+
 
   <!-- 9. FAQ -->
   <section class="faq-section">
+
     <div class="container">
+
       <div class="section-title">
-        <h2>PERGUNTAS FREQUENTES</h2>
+
+        <h2>
+          PERGUNTAS FREQUENTES
+        </h2>
+
       </div>
+
 
       <div class="faq">
+
         <details>
-          <summary>Como vou receber o material?</summary>
-          <p>O produto é digital. Após a confirmação da compra, você receberá as instruções para acessar o material.</p>
+
+          <summary>
+            Como vou receber o material?
+          </summary>
+
+          <p>
+            O produto é digital. Após a confirmação da compra,
+            você receberá as instruções para acessar o material.
+          </p>
+
         </details>
+
+
         <details>
-          <summary>Preciso ter impressora?</summary>
-          <p>Não necessariamente. Você pode utilizar as atividades digitalmente ou imprimir as que preferir.</p>
+
+          <summary>
+            Preciso ter impressora?
+          </summary>
+
+          <p>
+            Não necessariamente. Você pode utilizar as atividades
+            digitalmente ou imprimir as que preferir.
+          </p>
+
         </details>
+
+
         <details>
-          <summary>As atividades são para qual idade?</summary>
-          <p>O material reúne atividades variadas. A dificuldade pode variar, então você pode escolher as opções mais adequadas para a idade e o perfil da criança.</p>
+
+          <summary>
+            As atividades são para qual idade?
+          </summary>
+
+          <p>
+            O material reúne atividades variadas. A dificuldade
+            pode variar, então você pode escolher as opções mais
+            adequadas para a idade e o perfil da criança.
+          </p>
+
         </details>
+
+
         <details>
-          <summary>Preciso comprar materiais especiais?</summary>
-          <p>Não. Muitas propostas utilizam materiais simples que normalmente já existem em casa, como papel, lápis, objetos e materiais recicláveis.</p>
+
+          <summary>
+            Preciso comprar materiais especiais?
+          </summary>
+
+          <p>
+            Não. Muitas propostas utilizam materiais simples
+            que normalmente já existem em casa, como papel,
+            lápis, objetos e materiais recicláveis.
+          </p>
+
         </details>
+
+
         <details>
-          <summary>Como funciona a garantia de 7 dias?</summary>
-          <p>Você tem 7 dias para conhecer o produto. Caso não fique satisfeito, poderá solicitar o reembolso conforme as condições da oferta.</p>
+
+          <summary>
+            Como funciona a garantia de 7 dias?
+          </summary>
+
+          <p>
+            Você tem 7 dias para conhecer o produto. Caso não
+            fique satisfeito, poderá solicitar o reembolso
+            conforme as condições da oferta.
+          </p>
+
         </details>
+
       </div>
 
+
       <div style="margin-top:30px">
-        <a href="https://pay.cakto.com.br/uk5pwud_1077440" class="cta" target="_blank" rel="noopener">
+
+        <a
+          href="https://pay.cakto.com.br/uk5pwud_1077440"
+          class="cta"
+          target="_blank"
+          rel="noopener"
+        >
           QUERO AS 350 ATIVIDADES 🚀
         </a>
-        <p class="small-note">📲 Acesso digital após a confirmação da compra</p>
+
+        <p class="small-note">
+          📲 Acesso digital após a confirmação da compra
+        </p>
+
       </div>
+
     </div>
+
   </section>
+
 
   <!-- 10. RODAPÉ -->
   <footer>
-    <p>© 2026 350 Atividades Inteligentes. Todos os direitos reservados.</p>
+
+    <p>
+      © 2026 350 Atividades Inteligentes.
+      Todos os direitos reservados.
+    </p>
+
   </footer>
 
+
   <script>
-    // TIMER DE 15 MINUTOS
+
+    /* =========================
+       TIMER DE 15 MINUTOS
+    ========================= */
+
     let remaining = 15 * 60;
 
     function updateTimer(){
+
       const min = Math.floor(remaining / 60);
       const sec = remaining % 60;
-      document.getElementById("min").textContent = String(min).padStart(2,"0");
-      document.getElementById("sec").textContent = String(sec).padStart(2,"0");
 
-      if(remaining > 0) remaining--;
+      document.getElementById("min").textContent =
+        String(min).padStart(2,"0");
+
+      document.getElementById("sec").textContent =
+        String(sec).padStart(2,"0");
+
+      if(remaining > 0){
+        remaining--;
+      }
+
     }
 
     updateTimer();
-    setInterval(updateTimer, 1000);
 
-    // CARROSSEL
+    setInterval(updateTimer,1000);
+
+
+    /* =========================
+       CARROSSEL
+       AGORA COM 4 EXEMPLOS
+    ========================= */
+
     const slides = document.getElementById("slides");
     const dots = document.getElementById("dots");
+
     const total = slides.children.length;
+
     let current = 0;
 
-    for(let i=0;i<total;i++){
-      const dot=document.createElement("button");
-      dot.className="dot" + (i===0 ? " active" : "");
-      dot.setAttribute("aria-label","Ir para exemplo " + (i+1));
-      dot.onclick=()=>goTo(i);
+
+    /* CRIA AUTOMATICAMENTE 4 PONTINHOS */
+
+    for(let i = 0; i < total; i++){
+
+      const dot = document.createElement("button");
+
+      dot.className =
+        "dot" + (i === 0 ? " active" : "");
+
+      dot.setAttribute(
+        "aria-label",
+        "Ir para exemplo " + (i + 1)
+      );
+
+      dot.onclick = () => goTo(i);
+
       dots.appendChild(dot);
+
     }
+
 
     function goTo(index){
-      current=(index+total)%total;
-      slides.style.transform=`translateX(-${current*100}%)`;
-      [...dots.children].forEach((d,i)=>d.classList.toggle("active",i===current));
+
+      current = (index + total) % total;
+
+      slides.style.transform =
+        `translateX(-${current * 100}%)`;
+
+      [...dots.children].forEach((dot,i) => {
+
+        dot.classList.toggle(
+          "active",
+          i === current
+        );
+
+      });
+
     }
 
-    document.querySelector(".prev").onclick=()=>goTo(current-1);
-    document.querySelector(".next").onclick=()=>goTo(current+1);
 
-    let startX=0;
-    slides.addEventListener("touchstart",e=>startX=e.touches[0].clientX,{passive:true});
-    slides.addEventListener("touchend",e=>{
-      const dx=e.changedTouches[0].clientX-startX;
-      if(Math.abs(dx)>50) goTo(current+(dx<0?1:-1));
-    });
+    /* BOTÃO ANTERIOR */
+
+    document.querySelector(".prev").onclick = () => {
+      goTo(current - 1);
+    };
+
+
+    /* BOTÃO PRÓXIMO */
+
+    document.querySelector(".next").onclick = () => {
+      goTo(current + 1);
+    };
+
+
+    /* SWIPE NO CELULAR */
+
+    let startX = 0;
+
+    slides.addEventListener(
+      "touchstart",
+      e => {
+        startX = e.touches[0].clientX;
+      },
+      {passive:true}
+    );
+
+
+    slides.addEventListener(
+      "touchend",
+      e => {
+
+        const dx =
+          e.changedTouches[0].clientX - startX;
+
+        if(Math.abs(dx) > 50){
+
+          goTo(
+            current + (dx < 0 ? 1 : -1)
+          );
+
+        }
+
+      }
+    );
+
   </script>
+
 </body>
-</html>
+          </html>
